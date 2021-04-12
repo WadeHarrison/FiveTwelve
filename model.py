@@ -23,6 +23,26 @@ class Vec():
     Thus we can add two Vecs to get a Vec.
     """
     #Fixme:  We need a constructor, and __add__ method, and __eq__.
+    
+    def __init__(self, x, y):
+       self.x = x
+       self.y = y
+       return None
+    
+    def __add__(self, vector1, vector2):
+        v3.x = vector1.x + vector2.x
+        v3.y = vector1.y + vector2.y
+        return(vector3.x,vector3.y)
+
+    
+    def __eq__(self, vector1, vector2)
+        if vector1 == vector2:
+            return True
+        else:
+            return False
+
+
+
 
 
 class Tile(GameElement):
@@ -40,10 +60,12 @@ class Board(GameElement):
 
     def __init__(self):
         super().__init__()
-        self.tiles = [ None ]  # FIXME: a grid holds a matrix of tiles
+        self.tiles = [ None, None
+                        None,None ]  # FIXME: a grid holds a matrix of tiles
 
     def has_empty(self) -> bool:
         """Is there at least one grid element without a tile?"""
+        
         return False
         # FIXME: Should return True if there is some element with value None
 
@@ -62,3 +84,9 @@ class Board(GameElement):
         #FIXME
 
 
+def main():
+    v1 = Vec(3,4)
+    print(v1)
+
+if __name__ == "__main__":
+    main()
